@@ -1,9 +1,7 @@
 import pandas #used to import the training data
-import json
 import numpy as np #used for matrix operations
 import matplotlib.pyplot as plt #used to plot the graph
 from sklearn import preprocessing #used for initial normalisation of the dataset
-from json import JSONEncoder
 
 #our transfer / activation function is sigmoid
 def sigmoid_function(x):
@@ -321,12 +319,4 @@ for record in range(len(normalised_matrix)):
         good_facts = good_facts + 1
 
     print("Good facts:" + str(good_facts) + ", Bad facts: " + str(bad_facts))
-
-print("break")
-
-
-
-# loading the array weights
-npzfile = np.load("weights_ito_normal.npz")
-weights_input_to_hidden = npzfile["arr_0"]
 
